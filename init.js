@@ -91,7 +91,10 @@ function()
 {
 	var this_ = this;
 
-	this.loadCSS("css/" + this.getThemeName() + ".min");
+	if (this.getThemeName() === "darkbetter")
+		this.loadCSS("css/dark.min");
+	else
+		this.loadCSS("css/" + this.getThemeName() + ".min");
 
 	// Note: These files aren't necessarily loaded in order! They must not rely on other JS files.
 	this.loadJavaScriptFiles(
